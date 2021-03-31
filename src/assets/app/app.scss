@@ -1,0 +1,16 @@
+// Bootstrap functions
+@import 'node_modules/bootstrap/scss/functions';
+
+// Bootstrap variable overrides
+@import 'scss/variables-bootstrap';
+
+// Bootstrap variables (This must come after overrides)
+@import 'node_modules/bootstrap/scss/variables';
+
+// Bootstrap imports
+@import 'scss/bootstrap';
+
+// App wide SCSS Rules
+body {
+  font-family: 'Roboto', sans-serif;
+}
