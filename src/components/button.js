@@ -20,7 +20,7 @@ const ButtonStyled = styled.a`
   letter-spacing: -1px;
 
   &:hover {
-    filter: none;
+    filter: drop-shadow(0px 5px 2px ${props => props.color ? "lightgray" : "var(--primary-shadow)"});
   }
 `;
 

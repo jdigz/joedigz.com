@@ -1,19 +1,12 @@
 import React, { PureComponent } from 'react';
 import Logo from '../assets/static/images/headshot.jpg'
+import Icon from './icon';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
-const Icon = styled.div`
-  background-image: url(${Logo});
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 65px;
-  height: 65px;
-  border-radius: 50%;
 `;
 const NameWrapper = styled.span`
   margin-left: 10px;
@@ -27,7 +20,7 @@ class Signature extends PureComponent {
   render() { 
     return (
       <Wrapper>
-        <Icon />
+        <Icon logo={Logo} />
         <NameWrapper>Joe DiGregorio</NameWrapper>
       </Wrapper> );
   }
