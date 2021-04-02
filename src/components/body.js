@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
+import ImagePlaceholder from '../assets/static/images/imagePlaceholder.jpg';
 import Icon from './icon';
 
 /******************************************************************************/
@@ -8,21 +9,37 @@ import Icon from './icon';
 
 const BodyWrapper = styled.div`
 /* Variable for the Image Dimension */
-  --img-dim: calc(33vw - 14px);
+  /* --img-dim: calc(33vw - 14px); */
 `;
 const ImageWrapper = styled.div`
   width: 100%;
   margin: 55px 0;
   display: grid;
-  grid-template-columns: repeat(3, var(--img-dim));
+  grid-template-columns: repeat(3, 600px);
+  justify-content: center;
   column-gap: 23px;
   overflow: hidden;
+
+  @media(max-width: 1439px){
+    grid-template-columns: repeat(3, 42%);
+  }
+  @media(max-width: 1129px){
+    grid-template-columns: repeat(2, 50%);
+  }
+  @media(max-width: 519px){
+    // Here we want another image removed so we have only 1 picture
+  }
 `;
-const Img = styled.div`
-/* Temporarily a styled.div, replace with pictures */
-  width: var(--img-dim);
-  height: var(--img-dim);
-  background-color: var(--primary);
+const Img = styled.img`
+  width: 100%;
+  height: auto;
+  max-width: 670px;
+  border: 1px solid red;
+  &:last-of-type {
+    @media(max-width: 1129px){
+      display:none;
+    }
+  }
 `;
 const BodyText = styled.div`
   max-width: 1125px;
@@ -87,9 +104,9 @@ class Body extends PureComponent {
     return (
       <BodyWrapper>
         <ImageWrapper>
-          <Img />
-          <Img />
-          <Img />
+          <Img src={ImagePlaceholder} />
+          <Img src={ImagePlaceholder} />
+          <Img src={ImagePlaceholder} />
         </ImageWrapper>
         <BodyText>
           After 6+ years of software development experience at a top 5 Department of Defense Technology Company I have learned a thing or two.

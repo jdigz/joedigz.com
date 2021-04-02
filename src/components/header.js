@@ -11,20 +11,66 @@ const HeaderWrap = styled.div`
   justify-content: center;
   align-items: center;
 `;
-const Title = styled.h1`
+const IntroTitle = styled.h1`
   margin: 50px 0 32px 0;
   font-weight: 900;
-  font-size: 96px;
+  font-size: 112px;
   letter-spacing: -5px;
   text-align: center;
+
+  @media (max-width: 1439px){
+    font-size: 96px;
+  }
+  @media (max-width: 1129px){
+    font-size: 64px;
+    letter-spacing: -3px;
+  }
+  @media (max-width: 800px){
+    font-size: 45px;
+    letter-spacing: -2px;
+  }
+  @media (max-width: 600px){
+    font-size: 34px;
+  }
 `;
-const Subtitle = styled.span`
+const IntroSubtitle = styled.span`
   max-width: 1125px;
   margin-bottom: 60px;
   text-align: center;
   line-height: 48px;
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 300;
+
+  @media (max-width: 1439px){
+    max-width: 750px;
+    font-size: 22px;
+    line-height: 44px;
+  }
+  @media (max-width: 1130px){
+    max-width: 565px;
+    font-size: 18px;
+    line-height: 40px;
+  }
+  @media (max-width: 800px){
+    max-width: 400px;
+    font-size: 16px;
+    line-height: 32px;
+  }
+  @media (max-width: 600px){
+    max-width: 300px;
+    font-size: 14px;
+    line-height: 28px;
+  }
+`;
+const CTAWrapper = styled.div`
+  width: 550px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  @media(max-width: 800px) {
+    flex-direction: column;
+  }
 `;
 const ScrollLink = styled.a`
   font-weight: 500;
@@ -37,12 +83,6 @@ const ScrollLink = styled.a`
     text-decoration: none;
   }
 `;
-const CTAWrapper = styled.div`
-  width: 550px;
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
-`;
 const ScrollDownArrow = styled.svg`
   margin-right: 10px;
 `;
@@ -51,10 +91,10 @@ class Header extends PureComponent {
     return (
       <HeaderWrap>
         <Signature />
-        <Title>Freelance Website Developer</Title>
-        <Subtitle>I help individuals and small businesses grow and build their brand by
+        <IntroTitle>Freelance Website Developer</IntroTitle>
+        <IntroSubtitle>I help individuals and small businesses grow and build their brand by
           creating stunning and functional websites at affodable prices.
-        </Subtitle>
+        </IntroSubtitle>
         <CTAWrapper>
           <Button href='.'>I'm Interested</Button>
           <ScrollLink href='#portfolio'>
