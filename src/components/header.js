@@ -12,7 +12,7 @@ const HeaderWrap = styled.div`
   align-items: center;
 `;
 const IntroTitle = styled.h1`
-  margin: 50px 0 32px 0;
+  margin: 50px 0;
   font-weight: 900;
   font-size: 112px;
   letter-spacing: -5px;
@@ -46,7 +46,7 @@ const IntroSubtitle = styled.span`
     font-size: 22px;
     line-height: 44px;
   }
-  @media (max-width: 1130px){
+  @media (max-width: 1129px){
     max-width: 565px;
     font-size: 18px;
     line-height: 40px;
@@ -63,13 +63,14 @@ const IntroSubtitle = styled.span`
   }
 `;
 const CTAWrapper = styled.div`
-  width: 550px;
+  width: 500px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   
   @media(max-width: 800px) {
     flex-direction: column;
+    width: 100%;
   }
 `;
 const ScrollLink = styled.a`
@@ -93,7 +94,7 @@ class Header extends PureComponent {
         <Signature />
         <IntroTitle>Freelance Website Developer</IntroTitle>
         <IntroSubtitle>I help individuals and small businesses grow and build their brand by
-          creating stunning and functional websites at affodable prices.
+          creating stunning and functional websites at affordable prices.
         </IntroSubtitle>
         <CTAWrapper>
           <Button href='.'>I'm Interested</Button>
