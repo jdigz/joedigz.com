@@ -18,8 +18,12 @@ const FooterHeader = styled.h1`
 const FooterText = styled.div`
   margin-bottom: 50px;
   font-size: 30px;
-  
 `;
+const SocialMediaWrapper = styled.div`
+  margin-top: 100px;
+  font-size: 24px;
+`;
+
 
 class Footer extends PureComponent {
   render() { 
@@ -36,7 +40,9 @@ class Footer extends PureComponent {
         <Button>
           Send Email Now!
         </Button>
-        <SocialLinks />
+        <SocialMediaWrapper>
+          <SocialLinks />
+        </SocialMediaWrapper>
       </FooterWrapper>
       );
   }
