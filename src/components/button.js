@@ -26,7 +26,6 @@ const ButtonStyled = styled.a`
 
 class Button extends PureComponent {
   render() { 
-    console.log(this.props)
     return (
       <ButtonStyled color={this.props.color} href="." className="btn btn-primary">
         {this.props.children}
