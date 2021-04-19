@@ -71,7 +71,7 @@ const PortfolioGallery = styled.div`
 class Portfolio extends PureComponent {
   render() { 
     return (
-      <PortfolioWrapper>
+      <PortfolioWrapper id={this.props.id}>
         <HeadingWrapper>
           <Heading>
             No more talking<br/>

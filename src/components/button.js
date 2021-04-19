@@ -17,7 +17,6 @@ const ButtonStyled = styled.a`
   border-radius: 32px;
 /* Typography */
   font-size: 20px;
-  letter-spacing: -1px;
 
   &:hover {
     filter: drop-shadow(0px 5px 2px ${props => props.color ? "lightgray" : "var(--primary-shadow)"});
@@ -27,7 +26,7 @@ const ButtonStyled = styled.a`
 class Button extends PureComponent {
   render() { 
     return (
-      <ButtonStyled color={this.props.color} href="." className="btn btn-primary">
+      <ButtonStyled color={this.props.color} href={this.props.href} className="btn btn-primary">
         {this.props.children}
       </ButtonStyled>
       );

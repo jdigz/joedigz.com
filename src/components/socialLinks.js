@@ -1,12 +1,14 @@
 import React, { PureComponent } from 'react';
-import Facebook from './facebookIcon';
-import LinkedIn from './linkedInIcon';
-import GitHub from './githubIcon';
+import FacebookIcon from '../assets/static/images/facebook-icon.svg';
+import LinkedInIcon from '../assets/static/images/linkedin-icon.svg';
+import GitHubIcon from '../assets/static/images/github-icon.svg';
+import SVG from './svg';
 import styled from 'styled-components';
 
 const SocialList = styled.ul`
+  width: ${props => props.width ? props.width : ""};
   display: flex;
-  margin: 10px 150px;
+  margin: 10px 0;
   padding: 0;
   justify-content: space-around;
   list-style-type: none;
@@ -21,20 +23,20 @@ const SocialItem = styled.li`
 class SocialLinks extends PureComponent {
   render() { 
     return (
-      <SocialList>
+      <SocialList className={this.props.className} width={this.props.width}>
           <SocialItem>
             <a href="https://www.facebook.com/joedigz/" target="_blank" rel="noreferrer">
-              <Facebook size='50px'/>
+              <SVG size={this.props.size} svg={FacebookIcon} alt="Facebook Icon"/>
             </a>
           </SocialItem>
           <SocialItem>
             <a href="https://www.linkedin.com/in/joseph-digregorio-97907260/" target="_blank" rel="noreferrer">
-              <LinkedIn size='50px'/>
+              <SVG size={this.props.size} svg={LinkedInIcon} alt="LinkedIn Icon"/>
             </a>
           </SocialItem>
           <SocialItem>
             <a href="https://github.com/jdigz" target="_blank" rel="noreferrer">
-              <GitHub size='50px'/>
+              <SVG size={this.props.size} svg={GitHubIcon} alt="Github Icon"/>
             </a>
           </SocialItem>
       </SocialList>

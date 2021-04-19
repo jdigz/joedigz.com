@@ -4,9 +4,12 @@ import styled from 'styled-components';
 import Header from './components/header';
 import Body from './components/body';
 import Footer from './components/footer';
+import FloatingFooter from './components/floatingFooter';
+
 const PageWrapper = styled.div`
   width: 100%;
   margin: auto;
+  scroll-behavior: smooth;
 `;
 
 function App() {
@@ -15,6 +18,7 @@ function App() {
       <Header />
       <Body />
       <Footer />
+      <FloatingFooter />
     </PageWrapper>
   );
 }

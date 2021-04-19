@@ -24,7 +24,6 @@ const SocialMediaWrapper = styled.div`
   font-size: 24px;
 `;
 
-
 class Footer extends PureComponent {
   render() { 
     return (
@@ -37,7 +36,7 @@ class Footer extends PureComponent {
           I'll make it easy for you, just click the button below<br/>
           I would love to hear from you!
         </FooterText>
-        <Button>
+        <Button href='mailto: digregoj@hotmail.com'>
           Send Email Now!
         </Button>
         <SocialMediaWrapper>
