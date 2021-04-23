@@ -9,9 +9,9 @@ const Img = styled.img`
 class ImageLink extends PureComponent {
   render() { 
     return (
-      // <a className={this.props.className} href={this.props.href} target="_blank">
+      <a className={this.props.className} href={this.props.href} target="_blank">
         <Img className={this.props.className} src={this.props.thumbnail}/>
-      // </a>
+      </a>
     );
   }
 }

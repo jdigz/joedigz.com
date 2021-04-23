@@ -2,12 +2,12 @@ import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 import Gallery from './gallery';
 import Promises from './promises';
-import ImagePlaceholder from '../assets/static/images/imagePlaceholder.jpg';
 import ZoomImage from '../assets/static/images/zoom.jpg';
 import ActionImage from '../assets/static/images/action.jpg';
 import CodeImage from '../assets/static/images/coding.jpg';
 import NGCPizzaImage from '../assets/static/images/ngcpizza.png';
 import WeeklyEatsImage from '../assets/static/images/weeklyeats.png';
+import FacebookCloneImage from '../assets/static/images/fb-clone.png';
 import Portfolio from './portfolio';
 import ImageLink from './imageLink';
 
@@ -59,15 +59,19 @@ const BodyText = styled.div`
   line-height: 28px;
 }
 `;
-const PortfolioItem = styled.img`
+const PortfolioItem = styled.a`
   display: block;
   margin: 0 auto 50px auto;
   max-width: 1200px;
-  width: 85%;
   height: auto;
-
+  box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.25);
+  transition: transform 100ms ease-in;
   &:last-of-type{
     margin-bottom: 0;
+  }
+
+  &:hover {
+    transform: scale(1.03);
   }
 `;
 /********************************* Javascript *********************************/
@@ -87,7 +91,7 @@ class Body extends PureComponent {
         <Portfolio id="portfolio">
           <PortfolioItem as={ImageLink} thumbnail={WeeklyEatsImage}/>
           <PortfolioItem as={ImageLink} thumbnail={NGCPizzaImage}/>
-          {/* <PortfolioItem as={ImageLink} thumbnail={ImagePlaceholder}/> */}
+          <PortfolioItem as={ImageLink} thumbnail={FacebookCloneImage} href='https://joe-digz-facebook-clone.firebaseapp.com/'/>
         </Portfolio>
       </div>
     );
