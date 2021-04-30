@@ -7,6 +7,16 @@ const FooterWrapper = styled.div`
   margin: 50px auto 100px auto;
   max-width: 1025px;
   text-align: center;
+  
+  @media (max-width: 1129px){
+    max-width: 700px;
+  }
+  @media (max-width: 800px){
+    max-width: 500px;
+  }
+  @media (max-width: 600px){
+    max-width: 300px;
+  }
 `;
 const FooterHeader = styled.h1`
   margin-bottom: 50px;
@@ -14,10 +24,33 @@ const FooterHeader = styled.h1`
   font-weight: bold;
   letter-spacing: -5%;
   line-height: 100px;
+  
+  @media (max-width: 1129px){
+    font-size: 56px;
+    line-height: 75px;
+  }
+  @media (max-width: 800px){
+    font-size: 42px;
+    line-height: 50px;
+  }
+  @media (max-width: 600px){
+    font-size: 32px;
+    line-height: 42px;
+  }
 `;
 const FooterText = styled.div`
   margin-bottom: 50px;
   font-size: 30px;
+  
+  @media (max-width: 1129px){
+    font-size: 26px;
+  }
+  @media (max-width: 800px){
+    font-size: 20px;
+  }
+  @media (max-width: 600px){
+    font-size: 18px;
+  }
 `;
 const SocialMediaWrapper = styled.div`
   margin-top: 100px;

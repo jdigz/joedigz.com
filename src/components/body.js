@@ -8,6 +8,7 @@ import CodeImage from '../assets/static/images/coding.jpg';
 import NGCPizzaImage from '../assets/static/images/ngcpizza.png';
 import WeeklyEatsImage from '../assets/static/images/weeklyeats.png';
 import FacebookCloneImage from '../assets/static/images/fb-clone.png';
+import InstagramCloneImage from '../assets/static/images/ig-clone.png';
 import Portfolio from './portfolio';
 import ImageLink from './imageLink';
 
@@ -52,8 +53,6 @@ const BodyText = styled.div`
   line-height: 32px;
 }
 @media (max-width: 600px){
-  margin-left: 15px;
-  margin-right: 15px;
   max-width: 400px;
   font-size: 14px;
   line-height: 28px;
@@ -92,6 +91,7 @@ class Body extends PureComponent {
           <PortfolioItem as={ImageLink} thumbnail={WeeklyEatsImage}/>
           <PortfolioItem as={ImageLink} thumbnail={NGCPizzaImage}/>
           <PortfolioItem as={ImageLink} thumbnail={FacebookCloneImage} href='https://joe-digz-facebook-clone.firebaseapp.com/'/>
+          <PortfolioItem as={ImageLink} thumbnail={InstagramCloneImage} href="https://joe-digz-instagram-clone.firebaseapp.com/" />
         </Portfolio>
       </div>
     );

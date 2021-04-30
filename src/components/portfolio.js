@@ -35,7 +35,7 @@ const Heading = styled.h1`
     letter-spacing: -3px;
   }
   @media (max-width: 600px){
-    font-size: 40px;
+    font-size: 36px;
     letter-spacing: -1px;
   }
 `;
