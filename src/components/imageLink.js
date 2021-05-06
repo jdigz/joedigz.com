@@ -11,7 +11,7 @@ class ImageLink extends PureComponent {
   render() { 
     return (
       <a onClick={this.props.onClick} className={this.props.className} href={this.props.href} target="_blank" rel="noreferrer">
-        <Img className={this.props.className} src={this.props.thumbnail}/>
+        <Img className={this.props.className} src={this.props.thumbnail} alt={this.props.alt}/>
       </a>
     );
   }

@@ -2,17 +2,17 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Gallery from './gallery';
 import Promises from './promises';
-import ZoomImage from '../assets/static/images/zoom.jpg';
-import ActionImage from '../assets/static/images/action.jpg';
-import CodeImage from '../assets/static/images/coding.jpg';
-import NGCPizzaImage from '../assets/static/images/ngcpizza.png';
-import NGCPizzaImage2 from '../assets/static/images/ngcpizza2.png';
-import NGCPizzaImage3 from '../assets/static/images/ngcpizza3.png';
-import NGCPizzaImage4 from '../assets/static/images/ngcpizza4.png';
-import NGCPizzaImage5 from '../assets/static/images/ngcpizza5.png';
-import WeeklyEatsImage from '../assets/static/images/weeklyeats.png';
-import FacebookCloneImage from '../assets/static/images/fb-clone.png';
-import InstagramCloneImage from '../assets/static/images/ig-clone.png';
+import ZoomImage from '../assets/static/images/zoom.webp';
+import ActionImage from '../assets/static/images/action.webp';
+import CodeImage from '../assets/static/images/coding.webp';
+import NGCPizzaImage from '../assets/static/images/ngcpizza.webp';
+import NGCPizzaImage2 from '../assets/static/images/ngcpizza2.webp';
+import NGCPizzaImage3 from '../assets/static/images/ngcpizza3.webp';
+import NGCPizzaImage4 from '../assets/static/images/ngcpizza4.webp';
+import NGCPizzaImage5 from '../assets/static/images/ngcpizza5.webp';
+import WeeklyEatsImage from '../assets/static/images/weeklyeats.webp';
+import FacebookCloneImage from '../assets/static/images/fb-clone.webp';
+import InstagramCloneImage from '../assets/static/images/ig-clone.webp';
 import Portfolio from './portfolio';
 import ImageLink from './imageLink';
 import ScrollingGallery from './ScrollingGallery';
@@ -22,8 +22,9 @@ const weeklyEatsImages = [WeeklyEatsImage];
 const ngcPizzaImages = [NGCPizzaImage, NGCPizzaImage2, NGCPizzaImage3, NGCPizzaImage4, NGCPizzaImage5];
 
 const Img = styled.img`
-  width: 100%;
-  height: auto;
+  &:not(:first-of-type)&:not(:last-of-type) {
+    margin: 0 23px;
+  }
   &:last-of-type {
     @media(max-width: 1129px){
       display:none;
@@ -87,19 +88,19 @@ function Body() {
   return (
     <>
       <Gallery>
-        <Img src={ZoomImage} />
-        <Img src={ActionImage} />
-        <Img src={CodeImage} />
+        <Img src={ZoomImage} alt="Zoom meeting"/>
+        <Img src={ActionImage} alt="Coding"/>
+        <Img src={CodeImage} alt="Monitor showing code"/>
       </Gallery>
       <BodyText>
         After 6+ years of software development experience at a top 5 Department of Defense Technology Company I have learned a thing or two.
         </BodyText>
       <Promises />
       <Portfolio id="portfolio">
-        <PortfolioItem as={ImageLink} thumbnail={WeeklyEatsImage} onClick={() => {setopenModal(true); setimageSet(weeklyEatsImages)}}/>
-        <PortfolioItem as={ImageLink} thumbnail={NGCPizzaImage} onClick={() => {setopenModal(true); setimageSet(ngcPizzaImages)}}/>
-        <PortfolioItem as={ImageLink} thumbnail={FacebookCloneImage} href='https://joe-digz-facebook-clone.firebaseapp.com/' />
-        <PortfolioItem as={ImageLink} thumbnail={InstagramCloneImage} href="https://joe-digz-instagram-clone.firebaseapp.com/" />
+        <PortfolioItem as={ImageLink} thumbnail={WeeklyEatsImage} onClick={() => {setopenModal(true); setimageSet(weeklyEatsImages)}} alt="Weeklyeats portfolio project"/>
+        <PortfolioItem as={ImageLink} thumbnail={NGCPizzaImage} onClick={() => {setopenModal(true); setimageSet(ngcPizzaImages)}} alt="NGC Pizza portfolio project"/>
+        <PortfolioItem as={ImageLink} thumbnail={FacebookCloneImage} href='https://joe-digz-facebook-clone.firebaseapp.com/' alt="Facebook clone portfolio project"/>
+        <PortfolioItem as={ImageLink} thumbnail={InstagramCloneImage} href="https://joe-digz-instagram-clone.firebaseapp.com/" alt="Instagram clone portfolio project"/>
       </Portfolio>
       <ScrollingGallery images={imageSet} open={openModal} onClose={() => setopenModal(false)} />
     </>

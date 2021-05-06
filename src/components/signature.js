@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import Logo from '../assets/static/images/headshot.jpg'
+import Logo from '../assets/static/images/headshot.webp'
 import Icon from './icon';
 import styled from 'styled-components';
 

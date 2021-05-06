@@ -11,6 +11,7 @@ const PageWrapper = styled.div`
   width: 100%;
   margin: auto;
   scroll-behavior: smooth;
+  max-width: 1920px;
 `;
 
 function App() {
