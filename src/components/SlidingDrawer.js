@@ -58,22 +58,49 @@ const DownArrow = styled.div`
   cursor: pointer;
 `;
 
-const SlidingDrawer = ({ children, id }) => {
-  const [open, setopen] = useState(false)
 
+
+const SlidingDrawer = ({ children, id }) => {
+  const [open, setopen] = useState(false);
+  const [height, setheight] = useState(0);
+  const handleMouseEnter = () => {
+    if(!open) {
+      setheight(125);
+    }
+  }
+  const handleMouseLeave = () => {
+    if(!open) {
+      setheight(0);
+    }
+  }
+  const handleClick = () => {
+    if(open) {
+      setopen(false);
+      setheight(0);
+    } else {
+      setopen(true);
+      setheight('auto');
+    }
+  }
   return (
-    <SlidingDrawerContainer id={id} onClick={() => setopen(!open)} open={open}>
+    <SlidingDrawerContainer
+      id={id}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onClick={handleClick}
+      open={open}
+    >
       <SlidingDrawerTitle>What can I do for you? Click here to find out!</SlidingDrawerTitle>
       <AnimateHeightContainer>
         <AnimateHeight
           duration={500}
-          height={open ? 'auto' : 0}
+          height={height}
         >
           {children}
         </AnimateHeight>
-        {open && <UpArrow onClick={() => setopen(false)} />}
+        {open && <UpArrow onClick={handleClick} />}
       </AnimateHeightContainer>
-      {!open && <DownArrow onClick={() => setopen(true)} />}
+      {!open && <DownArrow onClick={handleClick} />}
     </SlidingDrawerContainer>
   )
 }
