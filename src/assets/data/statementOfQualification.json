@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "title": "Frontend Development",
+    "data": [
+      "Create and Design Beautiful Frontend User Pages",
+      "Create and Design Functional Backend Admin/User Pages",
+      "User/Administrator Login",
+      "Mobile Responsive Pages",
+      "Page Load Time Optimization",
+      "2021 ADA Compliance",
+      "Google Search Engine Optimization",
+      "Google Search Console",
+      "Google Schema Markup",
+      "Website Animation and Dynamic Design",
+      "Forms/Surveys/Contact Us Forms",
+      "Newsletter Subscription/Sign Up",
+      "Payment Processing",
+      "Photo Galleries",
+      "Modern Single Page Applications",
+      "Website Refreshes",
+      "API/Webhook Utilization",
+      "Figma Design"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Backend Developent",
+    "data": [
+      "Database Creation/Management",
+      "Static Media Storage",
+      "Website Hosting",
+      "Domain Acquisition",
+      "Server Setup/Maintenance",
+      "SSL Encryption (https vs http)",
+      "Backend Server Security",
+      "Website and Update Deployment",
+      "Website Uptime Monitoring"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Website Analytics",
+    "data": [
+      "Google Analytics",
+      "Facebook Pixel",
+      "Cookies",
+      "Website Activity Tracking/Analysis and Reports"
+    ]
+  }
+]
