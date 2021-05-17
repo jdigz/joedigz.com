@@ -178,10 +178,10 @@ function Body() {
         After 6+ years of software development experience at a top 5 Department of Defense Technology Company I have learned a thing or two.
         </BodyText>
       <Promises />
-      <SlidingDrawer>
+      <SlidingDrawer id="portfolio">
         <StatementofQualification />
       </SlidingDrawer>
-      <Portfolio id="portfolio">
+      <Portfolio>
         <PortfolioItem src={WeeklyEatsImage} onClick={() => {setopenModal(true); setproject(weeklyEatsProject)}} alt="Weeklyeats portfolio project"/>
         <PortfolioItem src={NGCPizzaImage} onClick={() => {setopenModal(true); setproject(ngcPizzaProject)}} alt="NGC Pizza portfolio project"/>
         <PortfolioItem src={FacebookCloneImage} onClick={() => {setopenModal(true); setproject(facebookCloneProject)}} alt="Facebook clone portfolio project"/>
