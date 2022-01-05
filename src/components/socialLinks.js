@@ -30,7 +30,7 @@ class SocialLinks extends PureComponent {
             </a>
           </SocialItem>
           <SocialItem>
-            <a href="https://www.linkedin.com/in/joseph-digregorio-97907260/" target="_blank" rel="noreferrer">
+            <a href="https://www.linkedin.com/in/joe-digz/" target="_blank" rel="noreferrer">
               <SVG size={this.props.size} svg={LinkedInIcon} alt="LinkedIn Icon"/>
             </a>
           </SocialItem>
