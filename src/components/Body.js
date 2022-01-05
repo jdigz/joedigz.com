@@ -167,6 +167,11 @@ const PortfolioItem = styled.img`
 function Body() {
   const [openModal, setopenModal] = useState(false);
   const [project, setproject] = useState(nullProject);
+
+  const startDate = new Date('07/28/2014');
+  const currentDate = new Date();
+  const yearsExp = Math.floor((currentDate - startDate)/(1000 * 60 * 60 * 24 * 365));
+  
   return (
     <>
       <Gallery>
@@ -175,7 +180,7 @@ function Body() {
         <Img src={CodeImage} alt="Monitor showing code"/>
       </Gallery>
       <BodyText>
-        After 6+ years of software development experience at a top 5 Department of Defense Technology Company I have learned a thing or two.
+        After {yearsExp}+ years of software development experience at a top 5 Department of Defense Technology Company I have learned a thing or two.
         </BodyText>
       <Promises />
       <SlidingDrawer id="portfolio">
