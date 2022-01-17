@@ -10,7 +10,9 @@ const IconDiv = styled.div`
   background-color: ${props => props.backgroundColor || 'var(--primary)'};
   background-size: cover;
   background-repeat: no-repeat;
+  border: 2px solid lightgray;
   border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   /* Font */
   text-align: center;
   color: ${props => props.fontColor || ""};
